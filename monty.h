@@ -2,6 +2,8 @@
 #define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
+#include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -23,14 +25,14 @@ struct stack_s *prev;
 struct stack_s *next;
 } stack_t;
 /**
-* struct bus_s - variables -args, file, line content
-* @arg: value
+* struct vag_s - variables -args, file, line content
+* @argi: value
 * @file: pointer to monty file
 * @content: line content
-* @lifi: flag change stack <-> queue
+* @blab: flag change stack <-> queue
 * Description: carries values through the program
 */
-typedef struct bus_s
+typedef struct vag_s
 {
 char *argi;
 FILE *file;
@@ -61,7 +63,6 @@ void f_push(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
 void f_pint(stack_t **head, unsigned int number);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
-int main(int argc, char *agrv[]);
 void free_stack(stack_t *head);
 void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);
