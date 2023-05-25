@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * f_mod - division of the 2nd element of the stack by the top
+ * func_mod - division of the 2nd element of the stack by the top
  * element of the stack
  * @head: the stack head
  * @counter: line_counter
  * Return: no return
 */
-void f_mod(stack_t **head, unsigned int counter)
+void func_mod(stack_t **head, unsigned int counter)
 {
 	stack_t *b;
 	int lenght = 0, haux;
