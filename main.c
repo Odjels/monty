@@ -1,4 +1,5 @@
 #include "monty.h"
+vag_t vag = {NULL, NULL, NULL, 0};
 /**
 * main - the monty code interpreter
 * @argc: this counts the number of arguments
@@ -7,7 +8,6 @@
 */
 int main(int argc, char *argv[])
 {
-	vag_t vag = {NULL, NULL, NULL, 0}
 	char *content;
 	FILE *file;
 	size_t size = 0;

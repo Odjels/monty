@@ -15,7 +15,7 @@ void f_push(stack_t **head, unsigned int counter)
 			a++;
 		for (; vag.argi[a] != '\0'; a++)
 		{
-			if (vag.argi[aj] > 57 || vag.argi[a] < 48)
+			if (vag.argi[a] > 57 || vag.argi[a] < 48)
 				gag = 1; }
 		if (gag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
